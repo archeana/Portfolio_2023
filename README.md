@@ -1,2 +1,2 @@
 # Portfolio_2023
- Aplication for a bootcamp that requested a porfolio. I documented my process in the blog section. My second website.
+I created this website for a bootcamp application that requested a portfolio. I documented my process in the blog section. This was my second website.
