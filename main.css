@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #14303f;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    position: rel;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    /*makes name to the left*/
+}
+
+/* The navigation bar */
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+/*Main Hero*/
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.homephoto-container {
+    padding: 10%;
+}
+
+.homephoto img {
+    height: 250%;
+    width: 430px;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+}
+
+.home-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00abf0
+}
+
+.home-content p {
+    font-size: 22px;
+    margin: 20px 0 40px;
+    color: white;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+/*About part*/
+
+.about {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: azure;
+    color: #14303f;
+}
+
+.about img {
+    height: auto;
+    width: 40%;
+    padding: 10%;
+}
+
+.about-text {
+    width: 60%;
+}
+
+.main {
+    max-width: 95%;
+    margin: 0, auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.about h2 {
+    display: block;
+    color: black;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    margin-left: 15%;
+}
+
+.about-text h3 {
+    color: blueviolet;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    color: #741b1b;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font: size 18px;
+    margin-bottom: 45px;
+    text-align: justify;
+}
+
+/*Back top buttom*/
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 60px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: blueviolet;
+    /* Set a background color */
+    color: azure;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+#myBtn:hover {
+    background-color: #913b82;
+    /* Add a dark-grey background on hover */
+}
+
+/*Blog page*/
+
+.blog-container {
+    width: 100%;
+    margin-top: 100px;
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 50px;
+}
+
+
+.blog .title {
+    text-align: center;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    padding: 20px;
+}
+
+/* Create two columns/boxes that floats next to each other */
+.list-entries {
+    float: left;
+    width: 30%;
+    height: 100vh;
+    /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 50px;
+}
+
+/* Style the list inside the menu */
+.list-entries ul {
+    list-style-type: none;
+}
+
+
+
+.blog-row {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: transparent;
+}
+
+.blog-row ul li {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+}
+
+.list-entries a {
+    color: #913b82;
+    font-weight: 500;
+}
+
+/* Clear floats after the columns */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Blog entries*/
+.blogdiary{
+    width: 100%;
+    background-color: transparent;
+    display: block;
+    padding: 100px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 50px;
+}
+
+.bloglist{
+    color: white;
+    padding: 12px; 
+    margin:40px
+}
+
+/*Projects Page*/
+
+.title-projects{
+    text-align: center;
+    margin: 1%;
+    color: azure;
+    line-height: 1.5
+}
+.container-projects {
+    color: #00abf0;
+    background: #741b1b;
+    margin: 2%;
+    width: 100vh;
+    align-items: center;
+}
+
+.project1{
+    align-content: center;
+    width: 100vh;
+    padding: 20px;
+    text-align: center;
+    height: auto;
+    line-height: 2.1;
+}
+
+/*footer*/
+footer {
+    background: transparent;
+    height: auto;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #00abf0;
+    text-align: center;
+}
+
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.socials li {
+    margin: 0 10px;
+
+}
+
+.socials a {
+    text-decoration: none;
+    color: #913b82;
+}
+
+
+.socials a i {
+    font-size: 2.5rem;
+}
+
+.footer-bottom {
+    background-color: black;
+    width: 100vw;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+Span {
+    color: #913b82;
+    font: size 18px;
+}
+
+/*contact Page*/
+
+/* CSS for the contact form */
+.content-contact {
+    display: flex;
+    overflow: auto;
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.text-contact {
+    background: transparent;
+    height: auto;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+.text-contact a[href^="mailto"] {
+    color: #913b82;
+}
+
+.contact {
+    background-color: azure;
+    padding: 20px;
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #204352;
+}
+
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+    color: #14303f;
+    font-size: 21px;
+}
+
+input,
+textarea,
+select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+}
+
+input,
+textarea {
+    background-color: #F1E2DA;
+    border: 1px solid #F1E2DA;
+    color: black;
+}
+
+
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #204352;
+    border-color: white;
+    min-width: 300px;
+}
+
+/* CSS for the image section Contact */
+.image {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.image img {
+    display: block;
+    max-width: 530px;
+    max-width: auto;
+    max-height: auto;
+}
+
+
+.submit {
+    box-shadow: inset 0 0 0 0 #913b82;
+    color: #913b82;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+
+.submit:hover {
+    color: #fff;
+    box-shadow: inset 500px 0 0 0 #913b82;
+    cursor: pointer;
+}
+
+/* Presentational styles */
+.submit {
+    color: #54b3d6;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+
+    .left,
+    .main,
+    .right {
+        width: 100%;
+        /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
