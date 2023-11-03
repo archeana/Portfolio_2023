@@ -9,6 +9,7 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title> Ana Jesus</title>
     <link rel="icon" type="image/x-icon" href="AJ (1).png">
+    <script src="https://kit.fontawesome.com/3bc0f60730.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
         </nav>
     </header>
 
-    <section class="home">
+    <section id="welcome-section" class="home">
         <div class="home-content">
             <h1>Hello👋, I'm Ana Jesus </h1>
             <h3>Aspiring web developer</h3>
@@ -44,24 +45,88 @@
         </div>
     </section>
 
-    <!-- About section start -->
-    <section class="about" id="Aboutme">
-        <h2>About me</h2>
-        <div class="main">
-            <img src="book_berg.jpg">
-            <div class="about-text">
-                <h3>Researcher aspiring to get <span>into tech</span></h3>
-                <p>As a researcher aspiring to transition into the tech industry, I am an archaeologist specializing in
-                    archaeobotany with a PhD in the field. After struggling to find suitable job opportunities, I
-                    embarked on a Project Management course where I discovered my passion for combining archaeobotany
-                    with technology. Eager to pursue this newfound interest, I delved into web development, quickly
-                    realizing its complexity and challenges.</p>
+    <!-- Projects section  -->
+    <i class="fa-solid fa-angle-double-down fa-bounce center"
+        style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;"></i>
+    <section class="projects-section" id="projects">
+        <h2 class="projects-section-header">These are some of my projects</h2>
+        <!-- <i class="fa-solid fa-angle-double-down fa-bounce center" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;" ></i> -->
+        <div class="projects-grid">
 
-                <p>My unique journey from researcher to web developer showcases my adaptability, persistence, and
-                    dedication to a career in technology. Join me as I combine my passion for archaeology and web
-                    development to create impactful digital experiences and contribute to innovative projects in the
-                    tech industry.
-                </p>
+            <!-- project 3 -->
+            <div class="project">
+                <a href="https://archeana.github.io/quiz/" target="_blank" class="project-tile"><img
+                        class="project-image" src="/Financial quiz.png" alt="#"></a>
+                <p class="project-title">Budget Bliss- Financial Quiz</p>
+                <div class="button_project">
+                    <a href="https://archeana.github.io/quiz/" target="_blank">
+                        <button class="website">Website</button></a>
+                    <a href="https://github.com/archeana/quiz" target="_blank"><button class="code">Code</button></a>
+                </div>
+            </div>
+            <!-- project 5 -->
+            <div class="project">
+                <a href="https://archeana.github.io/robofriends/" target="_blank" class="project-tile"><img
+                        class="project-image" src="/robofriendsreact.png" alt="#"></a>
+                <p class="project-title">Robofriends</p>
+                <div class="button_project">
+                    <a href="https://archeana.github.io/robofriends/" target="_blank">
+                        <button class="website">Website</button></a>
+                    <a href="https://github.com/archeana/robofriends" target="_blank"><button
+                            class="code">Code</button></a>
+                </div>
+            </div>
+
+            <!-- project 4 -->
+            <div class="project">
+                <a href="https://archeana.github.io/smaacstem.github.io/index.html" target="_blank"
+                    class="project-tile"><img class="project-image" src="/SMACCSTEM.png" alt="#"></a>
+                <p class="project-title">Educational website</p>
+                <div class="button_project">
+                    <a href="https://archeana.github.io/smaacstem.github.io/index.html" target="_blank">
+                        <button class="website">Website</button></a>
+                    <a href="https://github.com/archeana/smaacstem.github.io" target="_blank"><button
+                            class="code">Code</button></a>
+                </div>
+            </div>
+
+            <!-- project 6 -->
+            <div class="project">
+                <a href="#" target="_blank"
+                    class="project-tile"><img class="project-image"
+                        src="/facerecognition.png" alt="#"></a>
+                <p class="project-title">Face recognition</p>
+                <div class="button_project">
+                    <a href="#" target="_blank">
+                        <button class="website">In progress</button></a>
+                    <a href="https://github.com/archeana/facerecognition" target="_blank"><button
+                            class="code">Code (private)</button></a>
+                </div>
+            </div>
+            <!-- project 1 -->
+            <div class="project">
+                <a href="https://archeana.github.io/CFG-06-23-Group4/index.html" target="_blank"
+                    class="project-tile"><img class="project-image"
+                        src="http://127.0.0.1:5500/projects/cgfwebsite-min.png" alt="#"></a>
+                <p class="project-title">Women in Tech website</p>
+                <div class="button_project">
+                    <a href="https://archeana.github.io/Very-final-in-full-project/" target="_blank">
+                        <button class="website">Website</button></a>
+                    <a href="https://archeana.github.io/CFG-06-23-Group4/index.html" target="_blank"><button
+                            class="code">Code</button></a>
+                </div>
+            </div>
+            <!-- project 2 -->
+            <div class="project">
+                <a href="https://archeana.github.io/team-gold/index.html" target="_blank" class="project-tile"><img
+                        class="project-image" src="/budgetbliss.png" alt="image-budgetbliss"></a>
+                <p class="project-title">Budget Bliss- Website</p>
+                <div class="button_project">
+                    <a href="https://archeana.github.io/team-gold/index.html" target="_blank">
+                        <button class="website">Website</button></a>
+                    <a href="https://github.com/archeana/team-gold" target="_blank"><button
+                            class="code">Code</button></a>
+                </div>
             </div>
         </div>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
