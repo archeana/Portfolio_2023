@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -25,9 +26,86 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    margin-top: 6%;
+    /* z-index: 10;  */
     /*makes name to the left*/
 }
+
+/* Dark Mode Toggle z is on top of the navigation*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    right: 55px;
+    top: 30px;
+  }
+  
+  .theme-switch-wrapper span {
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  .toggle-text {
+    position: relative;
+    top: -4px;
+    right: 5px;
+    color: var(--on-background);
+  }
+  
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display: none;
+  }
+  
+  .slider {
+    background: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+  }
+  
+  .slider::before {
+    background: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background: var(--primary-color);
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round::before {
+    border-radius: 50%;
+  }
+  
+  .fas {
+    font-size: 30px;
+    margin-right: 5px;
+  }
 
 /* The navigation bar */
 
@@ -42,6 +120,8 @@ body {
     display: flex;
     flex-direction: row;
     position: sticky;
+    z-index: 100;
+     
 }
 
 .navbar a {
