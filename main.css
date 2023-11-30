@@ -17,7 +17,7 @@ body {
 }
 
 .header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -26,8 +26,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 6%;
-    /* z-index: 10;  */
+    z-index: 10;  
     /*makes name to the left*/
 }
 
@@ -36,9 +35,9 @@ body {
     display: flex;
     align-items: center;
     z-index: 100;
-    position: fixed;
-    right: 55px;
-    top: 30px;
+    position: relative;
+    justify-content: flex-end;
+    margin: 1% 1% 1% 0;
   }
   
   .theme-switch-wrapper span {
