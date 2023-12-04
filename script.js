@@ -19,3 +19,39 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+
+//Filter Projects in Homepage
+document.addEventListener("DOMContentLoaded", function () {
+  filterSelection("all");
+
+  // Add click event listener to filter buttons
+  document.querySelectorAll('.btn-f').forEach(function (button) {
+      button.addEventListener('click', function () {
+          filterSelection(this.dataset.filter);
+          setActiveButton(this);
+      });
+  });
+});
+
+function filterSelection(category) {
+  document.querySelectorAll('.project').forEach(function (project) {
+      const categories = project.classList;
+      const shouldShow = category === 'all' || categories.contains(category);
+
+      if (shouldShow) {
+          project.classList.add('show');
+      } else {
+          project.classList.remove('show');
+      }
+  });
+}
+
+function setActiveButton(clickedButton) {
+  // Remove 'active' class from all buttons
+  document.querySelectorAll('.btn-f').forEach(function (button) {
+      button.classList.remove('active');
+  });
+
+  // Add 'active' class to the clicked button
+  clickedButton.classList.add('active');
+}

@@ -66,18 +66,17 @@
     <section class="projects-section" id="projects">
         <h2 class="projects-section-header">These are some of my projects</h2>
         <!-- <i class="fa-solid fa-angle-double-down fa-bounce center" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;" ></i> -->
-        <div class="filter-projects">
-            <button class="btf allprojects">Show all</button>
-            <button class="btf React">React</button>
-            <button class="btf HTML [&] CSS">HTML and CSS </button>
-            <button class="btf Javascript"> Javascript</button>
-            <button class="btf Python"> Python</button>
-            <button class="btf Figma"> Figma</button>
+        <div class="filter-projects" id="filter-projects">
+            <button class="btn-f btf active" data-filter="all" onclick="filterSelection('all')"> Show all </button>
+            <button class="btn-f btf" data-filter="React" onclick="filterSelection('React')">React</button>
+            <button class="btn-f btf" data-filter="HTML-CSS" onclick="filterSelection('HTML-CSS')">HTML and CSS</button>
+            <button class="btn-f btf" data-filter="Javascript" onclick="filterSelection('Javascript')">Javascript</button>
+            <button class="btn-f btf" data-filter="Python" onclick="filterSelection('Python')"> Python</button>
+            <button class="btn-f btf" data-filter="Figma" onclick="filterSelection('Figma')"> Figma</button>
         </div>
         <div class="projects-grid">
-
             <!-- project 3 -->
-            <div class="project">
+            <div class="project btn-f Figma Javascript">
                 <a href="https://archeana.github.io/quiz/" target="_blank" class="project-tile"><img
                         class="project-image" src="/Financial quiz.png" alt="#"></a>
                 <p class="project-title">Budget Bliss- Financial Quiz</p>
@@ -88,7 +87,7 @@
                 </div>
             </div>
             <!-- project 5 -->
-            <div class="project">
+            <div class="project btn-f React">
                 <a href="https://archeana.github.io/robofriends/" target="_blank" class="project-tile"><img
                         class="project-image" src="/robofriendsreact.png" alt="#"></a>
                 <p class="project-title">Robofriends</p>
@@ -101,7 +100,7 @@
             </div>
 
             <!-- project 4 -->
-            <div class="project">
+            <div class="project btn-f  HTML-CSS Javascript">
                 <a href="https://archeana.github.io/smaacstem.github.io/index.html" target="_blank"
                     class="project-tile"><img class="project-image" src="/SMACCSTEM.png" alt="#"></a>
                 <p class="project-title">Educational website</p>
@@ -114,7 +113,7 @@
             </div>
 
             <!-- project 6 -->
-            <div class="project">
+            <div class="project btn-f React">
                 <a href="#" target="_blank" class="project-tile"><img class="project-image" src="/facerecognition.png"
                         alt="#"></a>
                 <p class="project-title">Face recognition</p>
@@ -126,7 +125,7 @@
                 </div>
             </div>
             <!-- project 1 -->
-            <div class="project">
+            <div class="project btn-f HTML-CSS">
                 <a href="https://archeana.github.io/CFG-06-23-Group4/index.html" target="_blank"
                     class="project-tile"><img class="project-image" src="/cgfwebsite-min.png" alt="#"></a>
                 <p class="project-title">Women in Tech website</p>
@@ -138,7 +137,7 @@
                 </div>
             </div>
             <!-- project 2 -->
-            <div class="project">
+            <div class="project btn-f HTML-CSS Javascript">
                 <a href="https://archeana.github.io/team-gold/index.html" target="_blank" class="project-tile"><img
                         class="project-image" src="/budgetbliss.png" alt="image-budgetbliss"></a>
                 <p class="project-title">Budget Bliss- Website</p>
