@@ -1,3 +1,62 @@
+const toggleSwitch = document.querySelector('input[type="checkbox"]');
+const toggleIcon = document.querySelector('.theme-switch-wrapper');
+
+// Dark Mode Styles
+function darkMode() {
+  document.body.style.backgroundColor = 'var(--color-bg-dark)';
+  // Assuming you have a logo element, update its color
+  document.querySelector('.logo').style.color = 'var(--color-logo-dark)';
+  // Assuming you have an h1 element, update its color
+  document.querySelector('h1').style.color = 'var(--color-h1-dark)';
+  // Update the color of all p elements
+  document.querySelectorAll('p').forEach(p => p.style.color = 'var(--color-p-dark)');
+  document.body.classList.add('dark-mode'); // Add a class for dark mode
+  toggleIcon.children[0].children[1].classList.replace('fa-sun', 'fa-moon');
+}
+
+// Light Mode Styles
+function lightMode() {
+  document.body.style.backgroundColor = 'var(--color-bg-light)';
+  // Assuming you have a logo element, update its color
+  document.querySelector('.logo').style.color = 'var(--color-logo-light)';
+  // Assuming you have an h1 element, update its color
+  document.querySelector('h1').style.color = 'var(--color-h1-light)';
+  // Update the color of all p elements
+  document.querySelectorAll('p').forEach(p => p.style.color = 'var(--color-p-light)');
+  document.body.classList.remove('dark-mode'); // Remove the dark mode class
+  toggleIcon.children[0].children[1].classList.replace('fa-moon', 'fa-sun');
+}
+
+// Switch Theme Dynamically
+function switchTheme(event) {
+  if (event.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    darkMode();
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+    lightMode();
+  }
+}
+
+// Event Listener
+toggleSwitch.addEventListener('change', switchTheme);
+
+// Check Local Storage For Theme
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+    darkMode();
+  }
+}
+
+
+
+
 //Top button-page Home
 // Get the button:
 let mybutton = document.getElementById("myBtn");
