@@ -1,38 +1,129 @@
+:root {
+    --color-bg-dark: rgb(20, 48, 63);
+    --color-bg-light: rgb(187, 221, 247);
+
+    --color-logo-dark: #00abf0;
+    --color-logo-light: rgb(165, 66, 153);
+
+    --color-h1-dark: white;
+    --color-h1-light: rgb(141, 48, 144);
+
+    --color-p-dark: rgb(187, 221, 247);
+    --color-p-light: rgb(44, 88, 65);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
+/* Default text color for light mode */
 body {
-    background: #14303f;
+    background: var(--color-bg-light);
     width: 100%;
     height: 100vh;
     margin: 0;
 }
 
 .header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: blueviolet;
+    max-width: 100%;
+    padding: 25px 10%;
+    background: var(--color-bg-dark);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 10;
     /*makes name to the left*/
+
+}
+
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    right: 25px;
+    top: 30px;
+}
+
+.theme-switch-wrapper span {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.fas {
+    color: #00abf0;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background: var(--color-logo-light);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider::before {
+    background: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background: var(--color-bg-light);
+}
+
+input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+.fas {
+    font-size: 30px;
+    margin-right: 5px;
 }
 
 /* The navigation bar */
 
 .logo {
     font-size: 25px;
-    color: #ededed;
+    color: var(--color-logo-light);
     text-decoration: none;
     font-weight: 600;
 }
@@ -45,7 +136,7 @@ body {
 
 .navbar a {
     font-size: 18px;
-    color: #ededed;
+    color: var(--color-bg-light);
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -79,7 +170,7 @@ nav li {
 .nav-link {
     text-decoration: none;
     font-size: 20px;
-    color: black;
+    color: var(--color-bg-dark);
     justify-content: space-evenly;
 }
 
@@ -99,15 +190,16 @@ nav li {
 
 
 /*Projects Page*/
+
 .project-section {
     text-align: center;
-    padding: 10rem 2rem;
+    padding: 6rem 2rem;
     background-color: antiquewhite;
 }
 
 .title-projects {
-    color: white;
-    margin:5%;
+    color: var(--color-h1-light);
+    margin: 2%;
     text-align: center;
     font-size: 28px;
     font-weight: 700;
@@ -127,11 +219,6 @@ nav li {
     margin-bottom: 6rem;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 .project {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
@@ -140,13 +227,15 @@ a {
 
 .button_project {
     position: relative;
-    display: block; 
+    display: block;
     justify-content: center;
     text-align: center;
     align-items: center;
-    
+
 }
-.website, .code{
+
+.website,
+.code {
     width: 110px;
     height: 10%;
     background: #913b82;
@@ -160,20 +249,21 @@ a {
     z-index: 1;
     cursor: pointer;
     padding: 5px;
-    margin:0 3% 5% 2%;
+    margin: 0 3% 5% 2%;
 }
 
-.project-image{
+.project-image {
     height: cal(100% - 6.8rem);
     width: 100%;
     object-fit: cover;
-} 
+}
 
 img {
     overflow-clip-margin: content-box;
     display: block;
     width: 100%;
 }
+
 .project-title {
     font-size: 20px;
     font-weight: 500;
@@ -183,23 +273,26 @@ img {
 }
 
 /*footer*/
+/*footer*/
 footer {
-    background: transparent;
+    background: var(--color-bg-dark);
     height: auto;
     width: 100vw;
     font-family: 'Poppins', sans-serif;
     padding-top: 20px;
-    padding-bottom: 20px;
     color: white;
     text-align: center;
+}
+.footer-bottom {
+    background-color: var(--color-bg-dark);
 }
 
 .footer-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #00abf0;
     text-align: center;
+    margin: 2%;
 }
 
 
@@ -211,7 +304,7 @@ footer {
 }
 
 .socials li {
-    margin: 0 10px;
+    margin: 0 20px;
 
 }
 
@@ -242,4 +335,3 @@ Span {
     color: #913b82;
     font: size 18px;
 }
-

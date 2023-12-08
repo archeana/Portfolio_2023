@@ -22,7 +22,7 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-Default text color for light mode
+/* Default text color for light mode */
 body {
     background: var(--color-bg-light);
     width: 100%;
@@ -76,7 +76,7 @@ body {
   }
   
   .slider {
-    background: var(--color-bg-light);
+    background: var(--color-logo-light);
     bottom: 0;
     cursor: pointer;
     left: 0;
