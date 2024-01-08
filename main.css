@@ -60,7 +60,7 @@ body {
 @media (max-width: 1064px) {
     .theme-switch-wrapper {
         top: 80px;
-        background-color: var(--color-bg-dark);
+        /* background-color: var(--color-bg-dark); */
         /* Adjust the top position to move it below the navbar */
     }
 }
@@ -243,21 +243,21 @@ nav li {
     }
 
     .homephoto-container {
-        width: 100%;
+        width: 80%;
         /* Make image take full width on smaller screens */
     }
 
     .homephoto img {
         height: auto;
         /* Make image responsive */
-        width: 100%;
+        width: 80%;
         /* Make image take full width on smaller screens */
     }
 }
 
 
 .homephoto-container {
-    padding: 10%;
+    padding: 5%;
 }
 
 .homephoto img {

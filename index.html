@@ -62,11 +62,10 @@
     </section>
 
     <!-- Projects section  -->
-    <i class="fa-solid fa-angle-double-down fa-bounce center"
-        style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;"></i>
+    <i class="fa-solid fa-angle-double-down fa-bounce center scroll-to-projects"
+        style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0; cursor: pointer;"></i>
     <section class="projects-section" id="projects">
         <h2 class="projects-section-header">These are some of my projects</h2>
-        <!-- <i class="fa-solid fa-angle-double-down fa-bounce center" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;" ></i> -->
         <div class="filter-projects" id="filter-projects">
             <button class="btn-f btf active" data-filter="all" onclick="filterSelection('all')"> Show all </button>
             <button class="btn-f btf" data-filter="React" onclick="filterSelection('React')">React</button>
@@ -76,7 +75,7 @@
             <button class="btn-f btf" data-filter="Python" onclick="filterSelection('Python')"> Python</button>
             <button class="btn-f btf" data-filter="Figma" onclick="filterSelection('Figma')"> Figma</button>
         </div>
-        <div class="projects-grid">
+        <div id="home_projects" class="projects-grid">
             <!-- project 3 -->
             <div class="project Figma Javascript">
                 <a href="https://archeana.github.io/quiz/" target="_blank" class="project-tile"><img

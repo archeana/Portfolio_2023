@@ -114,3 +114,22 @@ function setActiveButton(clickedButton) {
   // Add 'active' class to the clicked button
   clickedButton.classList.add('active');
 }
+
+
+//click to go down
+
+document.addEventListener('DOMContentLoaded', function() {
+    var scrollToProjects = document.querySelector('.scroll-to-projects');
+
+    scrollToProjects.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        var projectsSection = document.getElementById('home_projects');
+        
+        // Using smooth scroll behavior
+        projectsSection.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
