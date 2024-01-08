@@ -361,7 +361,7 @@ nav li {
 .project-section {
     text-align: center;
     padding: 10rem 2rem;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
 }
 
 .projects-section-header {

@@ -11,6 +11,10 @@ function darkMode() {
   // Update the color of all p elements
   document.querySelectorAll('p').forEach(p => p.style.color = 'var(--color-p-dark)');
   document.body.classList.add('dark-mode'); // Add a class for dark mode
+  // Update the background color of .project elements to blue in dark mode
+  document.querySelectorAll('.project').forEach(project => {
+    project.style.backgroundColor = 'rgb(112, 41, 99)';
+  });
   toggleIcon.children[0].children[1].classList.replace('fa-sun', 'fa-moon');
 }
 
@@ -24,6 +28,10 @@ function lightMode() {
   // Update the color of all p elements
   document.querySelectorAll('p').forEach(p => p.style.color = 'var(--color-p-light)');
   document.body.classList.remove('dark-mode'); // Remove the dark mode class
+  // Update the background color of .project elements to the default color in light mode
+  document.querySelectorAll('.project').forEach(project => {
+    project.style.backgroundColor = 'white'; // Change to the default color
+  });
   toggleIcon.children[0].children[1].classList.replace('fa-moon', 'fa-sun');
 }
 
