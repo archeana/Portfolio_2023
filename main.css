@@ -1,15 +1,15 @@
 :root {
-    --color-bg-dark: rgb(20,48,63);
-    --color-bg-light: rgb(187,221,247);
+    --color-bg-dark: rgb(20, 48, 63);
+    --color-bg-light: rgb(187, 221, 247);
 
     --color-logo-dark: #00abf0;
-    --color-logo-light: rgb(165,66,153);
-    
-    --color-h1-dark: white;
-    --color-h1-light:rgb(141,48,144);
+    --color-logo-light: rgb(165, 66, 153);
 
-    --color-p-dark:rgb(187,221,247);
-    --color-p-light:rgb(44,88,65);
+    --color-h1-dark: white;
+    --color-h1-light: rgb(141, 48, 144);
+
+    --color-p-dark: rgb(187, 221, 247);
+    --color-p-light: rgb(44, 88, 65);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500&display=swap');
@@ -22,6 +22,7 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+
 /* Default text color for light mode */
 body {
     background: var(--color-bg-light);
@@ -42,7 +43,7 @@ body {
     align-items: center;
     z-index: 10;
     /*makes name to the left*/
-    
+
 }
 
 /* Dark Mode Toggle */
@@ -53,29 +54,54 @@ body {
     position: fixed;
     right: 25px;
     top: 30px;
-  }
-  
-  .theme-switch-wrapper span {
+}
+
+/* Additional styles for screens with a maximum width of 1064px */
+@media (max-width: 1064px) {
+    .theme-switch-wrapper {
+        top: 80px;
+        /* Adjust the top position to move it below the navbar */
+    }
+}
+
+/* Additional styles for screens with a maximum width between 800px and 455px */
+@media (max-width: 800px) and (min-width: 456px) {
+    .theme-switch-wrapper {
+        top: 120px;
+        /* Adjust the top position to move it below the navbar */
+    }
+}
+
+/* Additional styles for screens with a maximum width of 455px */
+@media (max-width: 455px) {
+    .theme-switch-wrapper {
+        top: 80px;
+        /* Adjust the top position to move it further below the navbar */
+    }
+}
+
+
+.theme-switch-wrapper span {
     margin-right: 10px;
     font-size: 1rem;
-  }
-  
-  .fas {
+}
+
+.fas {
     color: #00abf0;
-  }
-  
-  .theme-switch {
+}
+
+.theme-switch {
     display: inline-block;
     height: 34px;
     position: relative;
     width: 60px;
-  }
-  
-  .theme-switch input {
+}
+
+.theme-switch input {
     display: none;
-  }
-  
-  .slider {
+}
+
+.slider {
     background: var(--color-logo-light);
     bottom: 0;
     cursor: pointer;
@@ -84,9 +110,9 @@ body {
     right: 0;
     top: 0;
     transition: 0.4s;
-  }
-  
-  .slider::before {
+}
+
+.slider::before {
     background: #fff;
     bottom: 4px;
     content: "";
@@ -95,28 +121,28 @@ body {
     position: absolute;
     transition: 0.4s;
     width: 26px;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background: var(--color-bg-light);
-  }
-  
-  input:checked + .slider::before {
+}
+
+input:checked+.slider::before {
     transform: translateX(26px);
-  }
-  
-  .slider.round {
+}
+
+.slider.round {
     border-radius: 34px;
-  }
-  
-  .slider.round::before {
+}
+
+.slider.round::before {
     border-radius: 50%;
-  }
-  
-  .fas {
+}
+
+.fas {
     font-size: 30px;
     margin-right: 5px;
-  }
+}
 
 /* The navigation bar */
 
@@ -188,15 +214,46 @@ nav li {
 }
 
 
-   /*Main Hero*/
+/*Main Hero*/
 .home {
     width: 100%;
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
+
+    box-sizing: border-box;
 }
+
+/* Added a media query for smaller screens to adjust the layout */
+@media (max-width: 800px) {
+    .home {
+        min-height: 60vh;
+        /* Adjusted height for smaller screens */
+    }
+
+    .home-content {
+        max-width: 100%;
+        /* Make content take full width on smaller screens */
+        margin-bottom: 20px;
+        /* Added margin to separate content and image */
+    }
+
+    .homephoto-container {
+        width: 100%;
+        /* Make image take full width on smaller screens */
+    }
+
+    .homephoto img {
+        height: auto;
+        /* Make image responsive */
+        width: 100%;
+        /* Make image take full width on smaller screens */
+    }
+}
+
 
 .homephoto-container {
     padding: 10%;
@@ -304,7 +361,7 @@ nav li {
     color: #913b82;
     background-color: transparent;
     border-radius: 8px;
-    border:1px solid #00abf0;
+    border: 1px solid #00abf0;
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 1px;
@@ -312,6 +369,7 @@ nav li {
     margin: 1%;
     cursor: pointer;
 }
+
 .project {
     /* Add this style to hide projects by default */
     display: none;
@@ -320,7 +378,7 @@ nav li {
 
 .show {
     display: block;
-  }
+}
 
 .projects-grid {
     display: grid;
@@ -334,6 +392,23 @@ nav li {
 }
 
 
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+    .projects-section-header {
+        font-size: 24px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-section {
+        padding: 6rem 2rem;
+    }
+}
 
 a {
     text-decoration: none;
@@ -433,9 +508,9 @@ img {
     /* Add a mouse pointer on hover */
     padding: 15px;
     /* Some padding */
-    border-radius: 10px ;
+    border-radius: 10px;
     /* Rounded corners */
-    border: 2px solid rgb(20,48,63);
+    border: 2px solid rgb(20, 48, 63);
     font-size: 18px;
     /* Increase font size */
     font-family: 'Poppins', sans-serif;
@@ -447,6 +522,24 @@ img {
     /* Add a dark-grey background on hover */
 }
 
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+    .filter-projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-f {
+        margin: 1% 0; /* Add margin to separate buttons in column layout */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-f {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+}
 
 
 /*Projects Page*/
@@ -485,6 +578,7 @@ footer {
     color: white;
     text-align: center;
 }
+
 .footer-bottom {
     background-color: var(--color-bg-dark);
 }
