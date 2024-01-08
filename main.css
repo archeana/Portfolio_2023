@@ -60,6 +60,7 @@ body {
 @media (max-width: 1064px) {
     .theme-switch-wrapper {
         top: 80px;
+        background-color: var(--color-bg-dark);
         /* Adjust the top position to move it below the navbar */
     }
 }
