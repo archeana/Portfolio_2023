@@ -334,6 +334,28 @@ nav li {
     width: 100%;
 }
 
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+    .filter-projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-f {
+        margin: 1% 0; /* Add margin to separate buttons in column layout */
+        font-size: 16px; /* Adjust font size for smaller screens */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-f {
+        font-size: 14px; /* Further reduce font size for smaller screens */
+        padding: 0.5rem; /* Further adjust padding for smaller screens */
+    }
+}
+
+
 /* <!-- Projects section  --> */
 .project-section {
     text-align: center;
@@ -627,7 +649,7 @@ footer {
     text-transform: capitalize;
 }
 
-Span {
+span {
     color: #913b82;
-    font: size 18px;
+    font-size: 18px;
 }
