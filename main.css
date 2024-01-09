@@ -60,7 +60,7 @@ body {
 @media (max-width: 1064px) {
     .theme-switch-wrapper {
         top: 80px;
-        /* background-color: var(--color-bg-dark); */
+      
         /* Adjust the top position to move it below the navbar */
     }
 }
@@ -228,7 +228,7 @@ nav li {
     box-sizing: border-box;
 }
 
-/* Added a media query for smaller screens to adjust the layout */
+/* media query for smaller screens to adjust the layout */
 @media (max-width: 800px) {
     .home {
         min-height: 60vh;
@@ -335,7 +335,7 @@ nav li {
     width: 100%;
 }
 
-/* Media queries for responsive adjustments */
+/* Media queries for responsive adjustments...there is still a extra space and is not the buttons and tried to reset.. look it up */
 @media (max-width: 768px) {
     .filter-projects {
         flex-direction: column;
@@ -361,7 +361,7 @@ nav li {
 .project-section {
     text-align: center;
     padding: 10rem 2rem;
-    /* background-color: antiquewhite; */
+   
 }
 
 .projects-section-header {

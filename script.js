@@ -124,7 +124,7 @@ function setActiveButton(clickedButton) {
 }
 
 
-//click to go down
+//click to go down-icon arrow down
 
 document.addEventListener('DOMContentLoaded', function() {
     var scrollToProjects = document.querySelector('.scroll-to-projects');
